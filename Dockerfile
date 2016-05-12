@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine
 MAINTAINER Cole Calistra <cole@kairos.com>
 
 RUN apk --update add wget \ 
@@ -18,8 +18,8 @@ RUN apk --update add wget \
     php-iconv \
     php-json \
     php-phar \
-    php-dom --repository http://nl.alpinelinux.org/alpine/edge/testing/ && \
-    rm /var/cache/apk/*                                                 && \
+    php-dom && \
+    rm /var/cache/apk/*            && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \
     mkdir -p /etc/nginx            && \
     mkdir -p /var/www/app          && \

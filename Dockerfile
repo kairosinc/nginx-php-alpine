@@ -10,6 +10,7 @@ RUN apk --update add wget \
     php-pdo \
     php-pdo_mysql \
     php-mysql \
+    php-mysqli \
     php-mcrypt \
     php-ctype \
     php-zlib \

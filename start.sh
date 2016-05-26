@@ -27,5 +27,10 @@ fi
 
 chown -R nginx:nginx /var/www/app
 
+# Run specific config script for a particular container
+if [ -f /usr/local/bin/nginx_env.sh ]; then
+  /usr/local/bin/nginx_env.sh
+fi
+
 # Start supervisord and services
 /usr/bin/supervisord -n -c /etc/supervisord.conf

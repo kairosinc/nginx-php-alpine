@@ -12,6 +12,7 @@ RUN apk --update add wget \
     php5-mysql \
     php5-mysqli \
     php5-mcrypt \
+    php5-xml \
     php5-ctype \
     php5-zlib \
     php5-curl \

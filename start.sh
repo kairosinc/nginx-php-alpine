@@ -10,7 +10,7 @@ sed -i -e "s/worker_processes 5/worker_processes $procs/" /etc/nginx/nginx.conf
 
 
 # If an htpasswd file is provided, download and configure nginx
-if [ -n "${ENABLE_BASIC_AUTH+1}" ] && [ "${ENABLE_BASIC_AUTH}" = "true" ]; then
+if [ "${ENABLE_BASIC_AUTH}" = "yes" ] || [ "${ENABLE_BASIC_AUTH}" = "true" ]; then
   echo "Enabling basic auth..."
    sed -i "s/#auth_basic/auth_basic/g;" /etc/nginx/conf.d/default.conf
 fi

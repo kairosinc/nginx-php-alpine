@@ -4,6 +4,7 @@ MAINTAINER Cole Calistra <cole@kairos.com>
 RUN apk --update add wget \ 
     nginx \
     supervisor \
+    bash \
     curl \
     git \
     php5-fpm \

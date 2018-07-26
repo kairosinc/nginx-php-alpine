@@ -17,7 +17,7 @@ fi
 
 # Push current environment variables into PHP-FPM
 STAGE=${STAGE:-dev}
-printenv | grep -v affinity:container | xargs -I{} echo {} | awk 'BEGIN { FS = "=" }; { print "env ["$1"] = \""$2"\"" }' >> /etc/php5/php-fpm.conf
+printenv | grep -v affinity:container | xargs -I{} echo {} | awk 'BEGIN { FS = "=" }; { print "env ["$1"] = \""$2"\"" }' >> /etc/php7/php-fpm.conf
 
 # Run Phing if present in the container
 if [ -f /var/www/app/phing ]; then
